@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello from the Cloud ☁️ — Vercel Demo</title>
+  <meta name="description" content="A live demo site deployed on Vercel in under 2 minutes. Fork, deploy, and watch auto-redeploy in action during this cloud computing workshop." />
+
+  <!-- Remove no-js class early to avoid flash -->
+  <script>document.documentElement.classList.remove('no-js');</script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- ── Animated background ── -->
+  <div class="bg-gradient" aria-hidden="true">
+    <div class="bg-orb-mid"></div>
+  </div>
+
+  <!-- ── Live clock (hidden when JS disabled via .no-js CSS rule) ── -->
+  <div class="clock-badge" role="status" aria-live="polite" aria-label="Your local time">
+    <span id="live-clock">--:--:-- local</span>
+  </div>
+
+  <div class="page-wrapper">
+    <main>
+
+      <!-- ════════════════════════════════
+           HERO
+      ═════════════════════════════════ -->
+      <section class="hero" aria-labelledby="hero-heading">
+
+        <!-- Pure SVG cloud illustration -->
+        <div class="cloud-wrap">
+          <svg class="cloud-svg"
+               viewBox="0 0 220 140"
+               xmlns="http://www.w3.org/2000/svg"
+               role="img"
+               aria-label="Floating cloud illustration">
+            <defs>
+              <linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#6c63ff" stop-opacity="0.9"/>
+                <stop offset="100%" stop-color="#00d4ff" stop-opacity="0.85"/>
+              </linearGradient>
+              <linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%"   stop-color="#a259ff" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#6c63ff" stop-opacity="0.4"/>
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Main cloud body -->
+            <ellipse cx="110" cy="95" rx="80" ry="30" fill="url(#cg1)" filter="url(#glow)"/>
+            <!-- Bumps -->
+            <circle cx="75"  cy="82" r="26" fill="url(#cg1)" filter="url(#glow)"/>
+            <circle cx="110" cy="68" r="34" fill="url(#cg1)" filter="url(#glow)"/>
+            <circle cx="150" cy="78" r="24" fill="url(#cg1)" filter="url(#glow)"/>
+            <!-- Highlight shimmer -->
+            <ellipse cx="100" cy="62" rx="18" ry="10" fill="rgba(255,255,255,0.2)"/>
+            <!-- Small trailing cloud -->
+            <ellipse cx="30"  cy="108" rx="22" ry="10" fill="url(#cg2)"/>
+            <circle  cx="22"  cy="101" r="11"          fill="url(#cg2)"/>
+            <circle  cx="36"  cy="98"  r="13"          fill="url(#cg2)"/>
+            <!-- Rain drops -->
+            <line x1="85"  y1="118" x2="80"  y2="132" stroke="url(#cg1)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+            <line x1="108" y1="122" x2="103" y2="136" stroke="url(#cg1)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+            <line x1="131" y1="118" x2="126" y2="132" stroke="url(#cg1)" stroke-width="2.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
+
+        <h1 id="hero-heading">Hello from the Cloud&nbsp;☁️</h1>
+        <p class="subtitle">
+          This site is live on the internet,<br>
+          deployed in under&nbsp;2&nbsp;minutes.
+        </p>
+      </section>
+
+      <!-- ════════════════════════════════
+           DEPLOYED-BY CARD
+      ═════════════════════════════════ -->
+      <section class="card-section" aria-label="Deployed by">
+        <!-- EDIT ME: change "YOUR NAME HERE" to your name, commit, and watch Vercel redeploy -->
+        <div class="deployed-card">
+          <p class="card-label">✦ Deployed by</p>
+          <p class="card-name">Kartikeya</p>
+        </div>
+      </section>
+
+      <!-- ════════════════════════════════
+           STEPS STRIP
+      ═════════════════════════════════ -->
+      <section class="steps-section" aria-label="Deployment pipeline">
+        <ol class="steps-strip" role="list">
+
+          <li class="step">
+            <div class="step-icon s1" aria-hidden="true">💻</div>
+            <span class="step-label">Code</span>
+          </li>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <li class="step">
+            <div class="step-icon s2" aria-hidden="true">
+              <!-- GitHub mark SVG -->
+              <svg width="26" height="26" viewBox="0 0 98 96" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M49 0C21.9 0 0 22 0 49.2c0 21.7 13.9 40.1 33.2 46.6 2.4.5 3.3-1.1 3.3-2.4v-8.5c-13.5 2.9-16.4-6.5-16.4-6.5-2.2-5.7-5.4-7.2-5.4-7.2-4.4-3 .3-3 .3-3 4.9.4 7.5 5 7.5 5 4.4 7.5 11.4 5.3 14.2 4.1.4-3.2 1.7-5.3 3.1-6.5-10.8-1.2-22.1-5.4-22.1-24.2 0-5.3 1.9-9.7 5-13.1-.5-1.2-2.2-6.2.5-12.9 0 0 4.1-1.3 13.4 5 3.9-1.1 8-1.6 12.2-1.6 4.1 0 8.3.6 12.2 1.6 9.3-6.3 13.4-5 13.4-5 2.7 6.7 1 11.7.5 12.9 3.1 3.4 5 7.8 5 13.1 0 18.8-11.4 22.9-22.2 24.1 1.7 1.5 3.3 4.5 3.3 9.1v13.5c0 1.3.9 2.9 3.4 2.4C84.2 89.2 98 70.9 98 49.2 98 22 76.1 0 49 0Z"/>
+              </svg>
+            </div>
+            <span class="step-label">GitHub</span>
+          </li>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <li class="step">
+            <div class="step-icon s3" aria-hidden="true">
+              <!-- Vercel triangle -->
+              <svg width="22" height="22" viewBox="0 0 116 100" fill="white" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M57.5 0L115 100H0L57.5 0Z"/>
+              </svg>
+            </div>
+            <span class="step-label">Vercel</span>
+          </li>
+
+          <div class="step-arrow" aria-hidden="true">→</div>
+
+          <li class="step">
+            <div class="step-icon s4" aria-hidden="true">🚀</div>
+            <span class="step-label">Live!</span>
+          </li>
+
+        </ol>
+      </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer>
+      <p>☁️&nbsp;&nbsp;<span>Cloud Computing Session</span>&nbsp;&nbsp;·&nbsp;&nbsp;Fork it, deploy it, own it.</p>
+    </footer>
+
+  </div><!-- /page-wrapper -->
+
+  <script src="script.js"></script>
+</body>
+</html>
